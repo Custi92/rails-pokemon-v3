@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <%= cl_image_tag @pokemon.photo.key %>
+      <%= @pokemon.name %>
+      <%= @pokemon.element_type %>
+      <%= link_to "Back", pokemons_path %>
+
+      <%= simple_form_for [@pokemon, @pokeball] do |f| %>
+        <%= f.association :trainer, label: "Who's trying their luck?" %>
+        <%= f.input :location %>
+        <%= f.input :caught_on %>
+        <%= f.submit "Catch em all" %>
+      <% end %>
+    </div>
+  </div>
+</div>

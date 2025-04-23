@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <% @pokemons.each do |pokemon| %>
+        <%= cl_image_tag pokemon.photo.key %>
+        <%= link_to pokemon.name, pokemon_path(pokemon) %>
+      <% end %>
+    </div>
+  </div>
+</div>

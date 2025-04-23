@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <% @trainers.each do |trainer| %>
+        <%= cl_image_tag trainer.photo.key %>
+        <%= link_to trainer.name, trainer_path(trainer) %>
+        <%= trainer.age %>
+      <% end %>
+    </div>
+  </div>
+</div>

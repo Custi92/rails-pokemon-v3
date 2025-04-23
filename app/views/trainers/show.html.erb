@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <%= cl_image_tag @trainer.photo.key %>
+      <%= @trainer.name %>
+      <%= @trainer.age %>
+      <% @trainer.pokeballs.each do |pokeball| %>
+        <%= cl_image_tag pokeball.pokemon.photo.key %>
+        <%= pokeball.pokemon.name %>
+        <%= pokeball.pokemon.element_type %>
+        <%= pokeball.caught_on %>
+        <%= pokeball.location %>
+      <% end %>
+      <%= link_to "Back", trainers_path %>
+    </div>
+  </div>
+</div>
