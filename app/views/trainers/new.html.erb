@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <%= simple_form_for(@trainer) do |f| %>
+        <%= f.input :name %>
+        <%= f.input :age %>
+        <%= f.input :photo %>
+        <%= f.submit "Create new trainer" %>
+      <% end %>
+    </div>
+  </div>
+</div>
