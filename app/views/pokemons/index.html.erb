@@ -1,6 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col">
+      <h1>Pokemon</h1>
       <% @pokemons.each do |pokemon| %>
         <%#= url_for(pokemon.photo) if pokemon.photo.attached? %>
         <%= cl_image_tag pokemon.photo.key, width: 500, height: 500 %>
