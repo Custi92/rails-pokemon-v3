@@ -2,8 +2,8 @@
   <div class="row">
     <div class="col">
       <% @pokemons.each do |pokemon| %>
-        <%= cl_image_tag url_for(pokemon.photo) if pokemon.photo.attached? %>
-        <%#= cl_image_tag pokemon.photo.key %>
+        <%#= url_for(pokemon.photo) if pokemon.photo.attached? %>
+        <%= cl_image_tag pokemon.photo.key, width: 500, height: 500 %>
         <%= link_to pokemon.name, pokemon_path(pokemon) %>
       <% end %>
     </div>
